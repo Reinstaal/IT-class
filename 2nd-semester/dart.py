@@ -1,5 +1,3 @@
-# Barely passed
-
 def ungueltig():
     print("Ungültige Eingabe, bitte eine Zahl oder 'Stop' zum Beenden): ")
 
