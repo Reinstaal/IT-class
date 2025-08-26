@@ -21,19 +21,21 @@ while True:
 
                 print(f"\nSumme aller Runnden: {sum(zaehler.values())}")
                 print(f"\nHöchste Rundenpunktzahl: {max(zaehler.values())}")
-                print(f"\nDurchschnittliche Rundenpunktzahl: {float(sum(zaehler.values())/float(x+1))}")
+                print(f"\nDurchschnittliche Rundenpunktzahl: {float(sum(zaehler.values())/float(x+1)):.2f}")
 
-                eingabe_g = int(input("Grenzwert eingeben: "))
-                try:
-                    n = 0
-                    for x in zaehler.values():
-                        if x > eingabe_g:
-                            n = n+1
-                        else:
-                            pass
-                    print(f"Alle Male über dem Grenzwert: {n}")
-                except ValueError:
-                    ungueltig()
+                while True:
+                    try:
+                        eingabe_g = int(input("Grenzwert eingeben: "))
+                        n = 0
+                        for x in zaehler.values():
+                            if x > eingabe_g:
+                                n = n+1
+                            else:
+                                pass
+                        print(f"Alle Male über dem Grenzwert: {n}")
+                        break
+                    except ValueError:
+                        print("Ungültige Eingabe, bitte eine ganze Zahl eingeben.")
                 break
             elif int(eingabe) <0:
                 print("Bitte nur positive Zahlen eingeben.")
@@ -41,7 +43,6 @@ while True:
                 print("Mehr als 180 Punkte pro Runde klingt aber stark nach Schummeln!")
             elif 0 <= int(eingabe) <= 180:
                 zaehler[len(zaehler)] = int(eingabe)
-                print(zaehler)
             else:
                 ungueltig()
                 print("else")
@@ -50,4 +51,3 @@ while True:
                 print("Es wurden keine Runden eingegeben.")
                 break
             ungueltig()
-            print("except")
