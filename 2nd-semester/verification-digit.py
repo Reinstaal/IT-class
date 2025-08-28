@@ -1,5 +1,3 @@
-from array import array
-
 def verifyOld(barcode):
     verificationDigit = 0
     for i, digit in enumerate(barcode, 1):
