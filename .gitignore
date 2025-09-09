@@ -1,2 +1,8 @@
+# testing gitignore:
+# can add in this folder for subfolders
+# add * for all files and subfolders in this folder
+# adding existing folder only ignores new files, changes in old files won't be ignored 
+# adding / after subfoldername seems to make no difference?
+
 others/
-.vscode/
+.vscode
