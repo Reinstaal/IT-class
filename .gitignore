@@ -3,6 +3,8 @@
 # add * for all files and subfolders in this folder
 # adding existing folder only ignores new files, changes in old files won't be ignored 
 # adding / after subfoldername seems to make no difference?
+# can add additional gitignores in folders, doesn't have to be in first available folder
+# ignores parent inputs (../)
 
 others/
 .vscode
