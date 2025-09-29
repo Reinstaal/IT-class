@@ -1,4 +1,4 @@
-# Excercise:
+# exercise:
 # Build an own stack with:
 # push(element): void
 # pop(): element
