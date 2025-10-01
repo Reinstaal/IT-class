@@ -16,7 +16,7 @@ class Rectangle(I2dobj):
         try: 
             self.__length = float(a)
         except ValueError:
-            print(ValueError)
+            print("Input type must be float.")
 
     def getLength(self):
         return self.__length
@@ -25,7 +25,7 @@ class Rectangle(I2dobj):
         try:
             self.__width = float(b)
         except ValueError:
-            print(ValueError)
+            print("Input type must be float.")
     
     def getWidth(self):
         return self.__width
