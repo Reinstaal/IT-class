@@ -20,7 +20,7 @@ class Fighter:
         while True:
             choice = input(f"It's {self.name} turn! Attack(A) or Eat(E): \n").strip().lower()
             if choice == "a" or choice == "e":
-                attackMight = math.floor((self.strength-self.hunger)/2)
+                attackMight = max(0, math.floor((self.strength-self.hunger)/2))
                 if choice == "e":
                     self.hunger -= 2
                     if self.hunger < 1:
